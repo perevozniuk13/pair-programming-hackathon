@@ -1,5 +1,5 @@
 import "./UserPage.scss"
 
 export default function UserPage() {
-  return <></>
+  return <>UserPage component</>
 }
