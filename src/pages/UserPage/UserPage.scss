@@ -1,7 +1,7 @@
 @use "../../styles/_partials/variables" as *;
 
 .user-library {
-    background-color: $primary-background;
+    background-color: red;
 
     &__head-container {
         display: flex;
@@ -12,7 +12,7 @@
     }
 
     &__title {
-        color: $primary-text;
+        color: $dodger-dark;
         font-size: 5rem;
     }
 
@@ -21,11 +21,12 @@
     }
 
     &__button {
-        background-color: $secondary-background;
-        color: $secondary-text;
+        background-color: $dodger-dark;
+        color: $dodger-light;
         margin: 1rem;
         width: 10rem;
         padding: 1rem;
+        border: none;
         border-radius: 5px;
     }
 
@@ -39,7 +40,8 @@
     &__subtitle {
         font-size: 3rem;
         padding: 1rem 2rem;
-        text-decoration: underline;
-        color: $secondary-text;
+        text-decoration: none;
+        color: $dodger-dark;
+        border-top: 2px solid $dodger-dark;
     }
 }

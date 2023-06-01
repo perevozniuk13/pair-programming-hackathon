@@ -69,20 +69,13 @@ export default function UserPage() {
       </div>
       {/* <h2 className="user-library__username">john_doe345</h2> */}
 
-      <section className="user-library__main">
-        <h3 className="user-library__subtitle">To consume:</h3>
-        <ScrollList
-          dataArray={libraryArray}
-          handleDelete={handleDelete}
-          status={"toconsume"}
-        />
-        <h3 className="user-library__subtitle">Consumed:</h3>
-        <ScrollList
-          dataArray={libraryArray}
-          handleDelete={handleDelete}
-          status={"consumed"}
-        />
-      </section>
+    
+        <section className="user-library__main">
+          <h3 className="user-library__subtitle">To Consume</h3>
+          <ScrollList dataArray={libraryArray} handleDelete={handleDelete} status={"toconsume"} />
+          <h3 className="user-library__subtitle">Consumed</h3>
+          <ScrollList dataArray={libraryArray} handleDelete={handleDelete}  status={"consumed"} />
+        </section>
     </section>
   );
 }

@@ -1,9 +1,9 @@
-@use "../../styles/partials/colors" as *;
+@use "../../styles/_partials/variables" as *;
 
 .header {
     // align-items: center;
-    background-color: $light-one;
-    border: 3px solid $emph-two;
+    background-color: $dodger-light;
+    border: 3px solid $dodger-dark;
     border-radius: 2rem;
     display: flex;
     // flex-direction: column;
@@ -14,29 +14,32 @@
     align-items: center;
 
     &__title {
-        background-color: $light-one;
-        color: $emph-one;
+        background-color: transparent;
+        color: $dodger-dark;
         font-size: 6rem;
         padding: 2rem;
         text-decoration: none;
         // width: 80%;
     }
     &__subtitle {
-        background-color: $light-one;
-        color: $emph-two;
+        background-color: transparent;
+        color: $dodger-dark;
         // width: 80%;
     }
 
     &__library-logo {
-        background-color: $light-one;
-        color: $emph-one;
+        background-color: transparent;
+        color: $dodger-dark;
         font-size: 3rem;
         padding: 2rem;
-
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
     }
 
     &__library-user {
-        background-color: $light-one;
-        color: $emph-two;
+        background-color: transparent;
+        color: $dodger-dark;
     }
 }

@@ -6,12 +6,11 @@
         display: flex;
 
     &__card {
-        background-color: $secondary-background;
         padding: 1rem 2rem;
         display: inline-block;
         height: 40rem;
         width: 25rem;
-        background-color: $secondary-background;
+        background-color: $dodger-dark;
         border: 1pz solid black;
         margin: 1rem;
         position: relative;
@@ -28,21 +27,24 @@
         width: 20rem;
         aspect-ratio: 9/14;
         margin: 1rem 0;
+        border-radius: 2rem;
 
     }
 
     &__card-title {
-        color: $secondary-text;
+        color: $dodger-light;
         // padding: 1rem;
-        background-color: $secondary-background;
+        background-color: $dodger-dark;
         white-space: initial;
 
     }
 
     &__delete-button {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 3rem;
+        top: 0.4rem;
+        right: 0.4rem;
+        width: 2rem;
+        border-radius: 0.5rem;
+        background-color: transparent;
     }
 }
