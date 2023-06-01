@@ -28,7 +28,6 @@
         right: 1.5rem;;
         top: 1rem;
     }
-
     &__image {
         border-radius: 0.5rem;
         // position: absolute;
@@ -36,6 +35,40 @@
         // top: 3rem;
         width: 8rem;
     }
+    &__buttons {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+    &__to-consume-button {
+        background-color: $emph-two;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        margin: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+    &__consumed-button {
+        background-color: $emph-two;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        margin: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+.books-button {
+    margin-top: 2rem;
+}
+
+.films-button {
+    margin-top: 3rem;
+}
+
+.albums-button {
+    margin-top: 2rem;
 }
 
 .card-books {

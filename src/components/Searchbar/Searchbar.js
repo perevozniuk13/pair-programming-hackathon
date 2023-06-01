@@ -35,11 +35,14 @@ export default function Searchbar({ setSearchResults, setSearchCategory }) {
 
         case "films": 
           axios
+            // .get(`http://www.omdbapi.com/?t=${query}&apikey=c08a80f8`)
             .get(`http://www.omdbapi.com/?s=${query}&apikey=c08a80f8`)
             .then(response => {
+              console.log("RESPONSE: ", response);
+              //const cleanedResponse = response.data{}
               const cleanedResponse = response.data.Search.map(item => { return { ...item, id: uuid() } });
               setSearchResults(cleanedResponse);
-            })
+            });            
           break;
 
         case "albums": 
