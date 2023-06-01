@@ -15,7 +15,7 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
       title: itemTitle,
       poster: itemImage,
       status: "toconsume",
-    }).then(response => console.log("Response after posting: ", response));
+    });
   };
 
   const handleConsumed = (itemTitle, itemImage) => {
@@ -30,7 +30,7 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
       title: itemTitle,
       poster: itemImage,
       status: "consumed",
-    }).then(response => console.log("Response after posting: ", response));
+    });
   };
 
   if (!cardsToDisplay) {
@@ -83,7 +83,6 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
   }
 
   if (searchCategory === "books") {
-    console.log("cardsToDisplay: ", cardsToDisplay);
     return (
       <section className="card-list">
         {cardsToDisplay.map((item) => {
@@ -97,7 +96,12 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
           } else {
             thumbnailSource = item.imageLinks.thumbnail;
           }
-
+          let authors;
+          if (item.authors.length === 1) {
+            authors = item.authors[0];
+          } else {
+            authors = item.authors.join(", ");
+          }
           return (
             <article className={`card card-${searchCategory}`} key={item.id}>
               <img
@@ -108,12 +112,7 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
               <div className="card__text">
                 <p className="card__detail">Year: {item.publishedDate}</p>
                 <p className="card__detail">Title: {cleanedTitle}</p>
-                <p className="card__detail">Authors: {item.authors.join(", ")}</p>
-                {/* {item.authors.map((author, index) => (
-                  <p className="card__detail" key={index}>
-                    Author: {author}
-                  </p>
-                ))} */}
+                <p className="card__detail">Authors: {authors}</p>
                 <p className="card__category-label">
                   {searchCategory.slice(0, -1).toUpperCase()}
                 </p>
