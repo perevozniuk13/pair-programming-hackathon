@@ -36,8 +36,9 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
     }).then(setRequestSuccess({title: itemTitle, list: "consumed"}));
   };
 
-  if (!cardsToDisplay) {
-    return <p>LOADING...</p>;
+  console.log("TEST: ", cardsToDisplay);
+  if (cardsToDisplay.length === 0 ||  !cardsToDisplay || typeof cardsToDisplay !== "object" || cardsToDisplay === undefined) {
+    return <p></p>;
   }
 
   if (searchCategory === "films") {
@@ -100,11 +101,18 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
             thumbnailSource = item.imageLinks.thumbnail;
           }
           let authors;
-          if (item.authors.length === 1) {
-            authors = item.authors[0];
+          console.log(item.authors);
+          if (!item.authors) {
+            authors = "";
           } else {
-            authors = item.authors.join(", ");
+            authors = item.authors[0];
           }
+          // if (item.authors.length === 1) {
+          //   authors = item.authors[0];
+          // } else {
+          //   authors = item.authors.join(", ");
+          // }
+
           return (
             <article className={`card card-${searchCategory}`} key={item.id}>
               <img
@@ -115,7 +123,7 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
               <div className="card__text">
                 <p className="card__detail">Year: {item.publishedDate}</p>
                 <p className="card__detail">Title: {cleanedTitle}</p>
-                <p className="card__detail">Authors: {authors}</p>
+                <p className="card__detail">Author: {authors}</p>
                 <p className="card__category-label">
                   {searchCategory.slice(0, -1).toUpperCase()}
                 </p>

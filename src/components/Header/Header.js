@@ -6,7 +6,7 @@ export default function Header() {
     <header className="header">
       <div>
       <Link to={"/"} className="header__title">TRACKER</Link>
-      <h2 className="header__subtitle">By Sasha and Joe</h2>
+      <h2 className="header__subtitle">By Sasha 🤓 and Joe 🤯</h2>
       </div>
 
 

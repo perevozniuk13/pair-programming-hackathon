@@ -1,7 +1,6 @@
 @use "../../styles/_partials/variables" as *;
 
 .user-library {
-    background-color: red;
 
     &__head-container {
         display: flex;
@@ -31,7 +30,7 @@
     }
 
     &__button--active {
-        border: 2px solid red;
+        border: 2px solid black;
     }
 
     // &__main {
