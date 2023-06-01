@@ -1,7 +1,7 @@
-@use "../../styles/partials/colors" as *;
+@use "../../styles/_partials/variables" as *;
 
 .card {
-    border: 1px solid $emph-two;
+    border: 1px solid $primary-text;
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
@@ -42,7 +42,7 @@
         padding: 1rem 0;
     }
     &__to-consume-button {
-        background-color: $emph-two;
+        background-color: $primary-text;
         border: none;
         border-radius: 1rem;
         color: white;
@@ -50,7 +50,7 @@
         padding: 0.5rem 0.5rem;
     }
     &__consumed-button {
-        background-color: $emph-two;
+        background-color: $primary-text;
         border: none;
         border-radius: 1rem;
         color: white;
@@ -72,15 +72,15 @@
 }
 
 .card-books {
-    background-color: lightseagreen;
+    background-color: $book-color;
 }
 
 .card-films {
-    background-color: lightpink;
+    background-color: $film-color;
 }
 
 .card-albums {
-    background-color: lightblue;
+    background-color: $album-color;
 }
 
 .albums-coming-soon {

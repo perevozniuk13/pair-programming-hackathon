@@ -1,7 +1,7 @@
 import CardList from "../../components/CardList/CardList";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import { useState } from "react";
-import "./Homepage.scss";
+import "./HomePage.scss";
 
 export default function HomePage() {
   const [searchResults, setSearchResults] = useState([]);

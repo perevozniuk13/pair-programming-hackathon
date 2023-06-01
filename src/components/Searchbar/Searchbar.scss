@@ -1,4 +1,4 @@
-@use "../../styles/partials/colors" as *;
+@use "../../styles/_partials/variables" as *;
 
 .searchbar {
 
@@ -8,27 +8,28 @@
         flex-direction: column;
     }
     &__input {
-        background-color: $light-one;
-        border: 2px solid $emph-two;
+        background-color: $dodger-light;
+        border: 2px solid $dodger-dark;
         border-radius: 1rem;
         margin: 1rem;
         padding: 1rem;
         width: 40%;
 
         &::placeholder {
-            color: $emph-two;
+            color: $dodger-dark;
         }
     }
     &__dropdown {
-        background-color: $light-one;
-        color: $emph-two;
+        background-color: $dodger-light;
+        border: none;
+        color: $dodger-dark;
 
     }
     &__button {
-        background-color: $light-one;
-        border: 2px solid $emph-two;
+        background-color: $dodger-light;
+        border: 2px solid $dodger-dark;
         border-radius: 1rem;
-        color: $emph-one;
+        color: $dodger-dark;
         font-weight: bold;
         margin: 1rem;
         padding: 1rem 2rem;

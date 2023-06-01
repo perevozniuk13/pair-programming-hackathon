@@ -60,9 +60,9 @@ export default function UserPage() {
 
     
         <section className="user-library__main">
-          <h3 className="user-library__subtitle">To consume:</h3>
+          <h3 className="user-library__subtitle">To Consume</h3>
           <ScrollList dataArray={libraryArray} handleDelete={handleDelete} status={"toconsume"} />
-          <h3 className="user-library__subtitle">Consumed:</h3>
+          <h3 className="user-library__subtitle">Consumed</h3>
           <ScrollList dataArray={libraryArray} handleDelete={handleDelete}  status={"consumed"} />
         </section>
     </section>

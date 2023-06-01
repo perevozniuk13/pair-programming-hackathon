@@ -1,11 +1,11 @@
-@use "./partials/colors" as *;
+@use "./_partials/variables" as *;
 
 html {
     font-size: 62.5%;
 }
 
 * {
-    background-color: $light-two;
+    background-color: $dodger-light;
     box-sizing: border-box;
     font-size: 1.6rem;
     margin: 0;
