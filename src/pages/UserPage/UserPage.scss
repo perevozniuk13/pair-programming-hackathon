@@ -5,11 +5,15 @@
 
     &__head-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
     }
 
     &__title {
         color: $primary-text;
+        font-size: 5rem;
     }
 
     &__buttons {
@@ -22,9 +26,16 @@
         margin: 1rem;
         width: 10rem;
         padding: 1rem;
+        border-radius: 5px;
     }
 
-    &__main {
+    // &__main {
+    // }
 
+    &__subtitle {
+        font-size: 3rem;
+        padding: 1rem 2rem;
+        text-decoration: underline;
+        color: $secondary-text;
     }
 }
