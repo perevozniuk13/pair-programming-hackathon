@@ -3,25 +3,46 @@
 .scroll-menu {
     overflow: auto;
         white-space: nowrap;
+        display: flex;
 
     &__card {
         background-color: $secondary-background;
-        padding: 1rem;
+        padding: 1rem 2rem;
         display: inline-block;
-        height: 30rem;
-        width: 20rem;
+        height: 40rem;
+        width: 25rem;
         background-color: $secondary-background;
         border: 1pz solid black;
         margin: 1rem;
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: -3px 0px 43px -18px rgba(0,0,0,0.1);
+
+        // &:hover {
+        //     // border: 2px solid $secondary-text;
+        // }
     }
 
     &__card-img {
-        width: 100%;
+        width: 20rem;
+        aspect-ratio: 9/14;
+        margin: 1rem 0;
 
     }
 
     &__card-title {
         color: $secondary-text;
+        // padding: 1rem;
+        background-color: $secondary-background;
+        white-space: initial;
 
+    }
+
+    &__delete-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
     }
 }
