@@ -7,7 +7,7 @@ export default function UserPage() {
   const [category, setCategory] = useState("movies");
   const [libraryArray, setLibraryArray] = useState("");
 
-  const getData =(category) => {
+  const getData =() => {
     axios
       .get(`http://localhost:8099/${category}`)
       .then((res) => {
@@ -21,7 +21,7 @@ export default function UserPage() {
 
 
   useEffect(() => {
-    getData(category);
+    getData();
   }, [category]);
 
    const handleDelete = (id) => {
@@ -60,9 +60,9 @@ export default function UserPage() {
 
     
         <section className="user-library__main">
-          <h3 className="user-library__subtitle">Want to watch</h3>
+          <h3 className="user-library__subtitle">To consume:</h3>
           <ScrollList dataArray={libraryArray} handleDelete={handleDelete} status={"toconsume"} />
-          <h3 className="user-library__subtitle">Watched</h3>
+          <h3 className="user-library__subtitle">Consumed:</h3>
           <ScrollList dataArray={libraryArray} handleDelete={handleDelete}  status={"consumed"} />
         </section>
     </section>
