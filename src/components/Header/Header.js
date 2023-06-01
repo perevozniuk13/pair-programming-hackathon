@@ -4,8 +4,16 @@ import "./Header.scss";
 export default function Header() {
   return (
     <header className="header">
-        <h1 className="header__title">TRACKER</h1>
-        <h2 className="header__subtitle">By Sasha and Joe</h2>
+      <div>
+      <Link to={"/"} className="header__title">TRACKER</Link>
+      <h2 className="header__subtitle">By Sasha and Joe</h2>
+      </div>
+
+
+<div>
+        <Link to={"/user"} className="header__library-logo">My Library</Link>
+        <h2 className="header__library-user">username465</h2>
+        </div>
     </header>
   );
   // return <nav className="nav">
