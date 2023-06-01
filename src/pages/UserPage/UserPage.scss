@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+.user-library {
+    background-color: $primary-background;
+
+    &__head-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__title {
+        color: $primary-text;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button {
+        background-color: $secondary-background;
+        color: $secondary-text;
+        margin: 1rem;
+        width: 10rem;
+        padding: 1rem;
+    }
+
+    &__main {
+
+    }
+}
