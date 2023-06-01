@@ -1,0 +1,25 @@
+@use "../../styles/partials/colors" as *;
+
+.header {
+    align-items: center;
+    background-color: $light-one;
+    border: 3px solid $emph-two;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 2rem 0;
+    text-align: center;
+
+    &__title {
+        background-color: $light-one;
+        color: $emph-one;
+        font-size: 3rem;
+        width: 80%;
+    }
+    &__subtitle {
+        background-color: $light-one;
+        color: $emph-two;
+        width: 80%;
+    }
+}
