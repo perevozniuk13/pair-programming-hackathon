@@ -1,0 +1,33 @@
+@use "../../styles/partials/colors" as *;
+
+.card {
+    border: 1px solid $emph-two;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    position: relative;
+    width: 40rem;
+
+    &__detail {
+        background-color: transparent;
+    }
+
+    &__category-label {
+        background-color: transparent;
+        position: absolute;
+        right: 1rem;;
+        top: 1rem;
+    }
+}
+
+.card-books {
+    background-color: lightseagreen;
+}
+
+.card-films {
+    background-color: lightpink;
+}
+
+.card-albums {
+    background-color: lightblue;
+}

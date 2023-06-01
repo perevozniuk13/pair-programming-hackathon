@@ -1,0 +1,29 @@
+[
+{
+    "yearReleased": "2019",
+    "director": "Bong Joon-ho",
+    "title": "Parasite",
+    "yearConsumed": "2023",
+    "monthConsumed": "May",
+    "dayConsumed": "31",
+    "rating": "★★★★★"
+},
+{
+    "yearReleased": "2023",
+    "author": "David Edmonds",
+    "title": "Parfit",
+    "yearConsumed": "2023",
+    "monthConsumed": "May",
+    "dayConsumed": "31",
+    "rating": "★★★★★"
+},
+{
+    "yearReleased": "1998",
+    "artist": "UNKLE",
+    "title": "Psyence Fiction",
+    "yearConsumed": "2023",
+    "monthConsumed": "May",
+    "dayConsumed": "31",
+    "rating": "★★★★★"
+}
+]
