@@ -1,8 +1,11 @@
 import "./CardList.scss";
 import Card from "../Card/Card";
 import axios from "axios";
+import { useState } from "react";
 
 export default function CardList({ cardsToDisplay, searchCategory }) {
+  const [requestSuccess, setRequestSuccess] = useState(false);
+
   const handleToConsume = (itemTitle, itemImage) => {
     let endpoint;
     if (searchCategory === "films") {
@@ -15,7 +18,7 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
       title: itemTitle,
       poster: itemImage,
       status: "toconsume",
-    });
+    }).then(setRequestSuccess({title: itemTitle, list: "toconsume"}));
   };
 
   const handleConsumed = (itemTitle, itemImage) => {
@@ -30,7 +33,7 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
       title: itemTitle,
       poster: itemImage,
       status: "consumed",
-    });
+    }).then(setRequestSuccess({title: itemTitle, list: "consumed"}));
   };
 
   if (!cardsToDisplay) {
@@ -122,14 +125,14 @@ export default function CardList({ cardsToDisplay, searchCategory }) {
                     onClick={() => handleToConsume(cleanedTitle, thumbnailSource)}
                     itemID={item.id}
                   >
-                    ➪ To Consume
+                    {requestSuccess.title === cleanedTitle && requestSuccess.list === "toconsume" ? <span className="request-symbol">✅</span> : <span className="request-symbol">➪</span>} To Consume
                   </button>
                   <button
                     className="card__consumed-button"
                     onClick={() => handleConsumed(cleanedTitle, thumbnailSource)}
                     itemID={item.id}
                   >
-                    ➪ Consumed
+                    {requestSuccess.title === cleanedTitle && requestSuccess.list === "consumed" ? <span className="request-symbol">✅</span> : <span className="request-symbol">➪</span>} Consumed
                   </button>
                 </div>
               </div>
