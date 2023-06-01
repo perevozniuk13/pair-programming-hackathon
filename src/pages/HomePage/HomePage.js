@@ -8,14 +8,12 @@ export default function HomePage() {
   const [searchCategory, setSearchCategory] = useState("");
 
   if (!searchResults) {
-    console.log("Rerendered HomePage!")
     return (
       <Searchbar setSearchResults={setSearchResults}/>
     );
   }
 
   if (searchResults) {
-    console.log("Rerendered HomePage!")
     return (
       <>
       <Searchbar setSearchResults={setSearchResults} setSearchCategory={setSearchCategory}/>

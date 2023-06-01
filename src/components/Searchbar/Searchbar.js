@@ -30,17 +30,15 @@ export default function Searchbar({ setSearchResults, setSearchCategory }) {
                 }
               });
               setSearchResults(cleanedResults);
-              console.log(cleanedResults);
             })
           break;
 
         case "films": 
           axios
-            .get(``)
+            .get(`http://www.omdbapi.com/?s=${query}&apikey=c08a80f8`)
             .then(response => {
-              const cleanedResponse = response;
+              const cleanedResponse = response.data.Search.map(item => { return { ...item, id: uuid() } });
               setSearchResults(cleanedResponse);
-              console.log(cleanedResponse);
             })
           break;
 
@@ -50,7 +48,6 @@ export default function Searchbar({ setSearchResults, setSearchCategory }) {
           .then(response => {
             const cleanedResponse = response;
             setSearchResults(cleanedResponse);
-            console.log(cleanedResponse);
           })
           break;
 
