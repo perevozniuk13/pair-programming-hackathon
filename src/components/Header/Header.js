@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default function Header() {
@@ -7,4 +8,8 @@ export default function Header() {
         <h2 className="header__subtitle">By Sasha and Joe</h2>
     </header>
   );
+  // return <nav className="nav">
+  //   <Link to={"/"} className="nav__logo">Logo</Link>
+  //   <Link to={"/user"} className="nav__library-logo">My Library / username465</Link>
+  // </nav>
 }

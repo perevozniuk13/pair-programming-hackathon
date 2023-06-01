@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Mainfont;
+    src: url("./fonts/Prompt-Bold.ttf");
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: Mainfont;
+    src: url("./fonts/Prompt-Regular.ttf");
+    font-weight: 400;
+  }
+  
+
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    font-family: Mainfont;
+    font-weight: 400;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
