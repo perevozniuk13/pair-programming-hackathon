@@ -1,12 +1,22 @@
-@use "../../styles/partials/colors" as *;
+@use "../../styles/_partials/variables" as *;
 
 .card {
-    border: 1px solid $emph-two;
+    border: 1px solid $primary-text;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
     margin: 1rem auto;
     padding: 1rem;
     position: relative;
-    width: 40rem;
+    width: 45rem;
+
+    &__text {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+    }
 
     &__detail {
         background-color: transparent;
@@ -15,19 +25,68 @@
     &__category-label {
         background-color: transparent;
         position: absolute;
-        right: 1rem;;
+        right: 1.5rem;;
         top: 1rem;
+    }
+    &__image {
+        aspect-ratio: 8/12;
+        border-radius: 0.5rem;
+    }
+    &__buttons {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+    &__to-consume-button {
+        background-color: $dodger-light;
+        border: none;
+        border-radius: 1rem;
+        color: $dodger-dark;
+        margin: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+    &__consumed-button {
+        background-color: $dodger-light;
+        border: none;
+        border-radius: 1rem;
+        color: $dodger-dark;
+        margin: 1rem;
+        padding: 0.5rem 0.5rem;
     }
 }
 
+.books-button {
+    margin-top: 2rem;
+}
+
+.films-button {
+    margin-top: 3rem;
+}
+
+.albums-button {
+    margin-top: 2rem;
+}
+
 .card-books {
-    background-color: lightseagreen;
+    background-color: $book-color;
 }
 
 .card-films {
-    background-color: lightpink;
+    background-color: $film-color;
 }
 
 .card-albums {
-    background-color: lightblue;
+    background-color: $album-color;
+}
+
+.albums-coming-soon {
+    color: red;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.request-symbol {
+    background-color: transparent;
 }

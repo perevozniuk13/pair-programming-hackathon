@@ -1,15 +1,18 @@
 @use "../../styles/_partials/variables" as *;
 
 .user-library {
-    background-color: $primary-background;
 
     &__head-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
     }
 
     &__title {
-        color: $primary-text;
+        color: $dodger-dark;
+        font-size: 5rem;
     }
 
     &__buttons {
@@ -17,14 +20,27 @@
     }
 
     &__button {
-        background-color: $secondary-background;
-        color: $secondary-text;
+        background-color: $dodger-dark;
+        color: $dodger-light;
         margin: 1rem;
         width: 10rem;
         padding: 1rem;
+        border: none;
+        border-radius: 5px;
     }
 
-    &__main {
+    &__button--active {
+        border: 2px solid black;
+    }
 
+    // &__main {
+    // }
+
+    &__subtitle {
+        font-size: 3rem;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: $dodger-dark;
+        border-top: 2px solid $dodger-dark;
     }
 }
