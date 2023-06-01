@@ -6,9 +6,8 @@ import axios from "axios";
 export default function UserPage() {
   const [category, setCategory] = useState("movies");
   const [libraryArray, setLibraryArray] = useState("");
-  const [clickedCardFlag, setClickedCardFlag] = useState(false);
 
-  useEffect(() => {
+  const getData =(category) => {
     axios
       .get(`http://localhost:8099/${category}`)
       .then((res) => {
@@ -17,7 +16,21 @@ export default function UserPage() {
         console.log(category);
       })
       .catch((error) => console.log(error));
+
+  }
+
+
+  useEffect(() => {
+    getData(category);
   }, [category]);
+
+   const handleDelete = (id) => {
+    axios.delete(`http://localhost:8099/${category}/${id}`)
+    .then((res) => {
+        getData();
+    })
+
+  }
 
   if (!libraryArray) {
     return <p>Loading...</p>;
@@ -44,15 +57,14 @@ export default function UserPage() {
         </div>
       </div>
       {/* <h2 className="user-library__username">john_doe345</h2> */}
-      {!clickedCardFlag && (
+
+    
         <section className="user-library__main">
           <h3 className="user-library__subtitle">Want to watch</h3>
-          <ScrollList dataArray={libraryArray} status={"wantto"} setClickedCardFlag={setClickedCardFlag}/>
+          <ScrollList dataArray={libraryArray} handleDelete={handleDelete} status={"toconsume"} />
           <h3 className="user-library__subtitle">Watched</h3>
-          <ScrollList dataArray={libraryArray} status={"done"} setClickedCardFlag={setClickedCardFlag}/>
+          <ScrollList dataArray={libraryArray} handleDelete={handleDelete}  status={"consumed"} />
         </section>
-      )}
-      {clickedCardFlag && <p>clicked card info</p>}
     </section>
   );
 }

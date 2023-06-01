@@ -13,6 +13,7 @@
         background-color: $secondary-background;
         border: 1pz solid black;
         margin: 1rem;
+        position: relative;
     }
 
     &__card-img {
@@ -23,5 +24,12 @@
     &__card-title {
         color: $secondary-text;
 
+    }
+
+    &__delete-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
     }
 }
